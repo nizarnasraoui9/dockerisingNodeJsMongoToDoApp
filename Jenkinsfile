@@ -27,7 +27,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh 'scp target/* nizar@193.40.156.27'
+        sh 'scp target/ nizar@193.40.156.27'
         sh "ssh nizar@193.40.156.27 'nohup node server.js'"
       }
     }
